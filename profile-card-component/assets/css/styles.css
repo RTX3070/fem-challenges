@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #19A2AE;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: bottom -155% left 125%, top -110% right 127%;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+
+.bolder {
+    font-weight: 700;
+}
+
+.lighter {
+    color: #969696;
+    font-weight: 300;
+}
+
+.card {
+    background-color: #ffffff;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    border-radius: 5%;
+    box-shadow: 1px 1px 20px 1px #6A6F81;
+    display: block;
+    height: 390px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+}
+
+.card .portrait {
+    height: 75%;
+}
+
+.card .portrait .user-portrait {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    top: 32%;
+    width: 35%;
+}
+
+.card .portrait .user-portrait img {
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+}
+
+.card .portrait .user-infos {
+    position: relative;
+    text-align: center;
+    top: 38%;
+}
+
+.card .portrait .user-infos p.lighter {
+    font-size: 14px;
+    margin-top: 4%;
+}
+
+.card .user-scores {
+    align-items: center;
+    border-top: 1px solid #969696;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 25%;
+    justify-content: space-evenly;
+}
+
+.card .user-scores .followers p.lighter,
+.card .user-scores .likes p.lighter,
+.card .user-scores .photos p.lighter {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 15%;
+    text-align: center;
+}
+
+.attribution {
+    bottom: 1%;
+    display: block;
+    left: 25%;
+    position: absolute;
+    text-align: center;
+    width: 50%;
+}
+
+.attribution p {
+    color: #969696;
+    font-size: 10px;
+}
+
+.attribution p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-position: bottom -115% left -52%, top -163% right -47%;
+    }
+}
