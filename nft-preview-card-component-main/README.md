@@ -7,7 +7,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [Author](#author)
 
 ## Overview
@@ -23,10 +22,6 @@ Users should be able to:
 
 ![Desktop View](./desktop-view.png)
 ![Mobile View](./mobile-view.png)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 
 ## My process
 
