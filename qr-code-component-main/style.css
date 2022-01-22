@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 15px;
+    margin: auto;
+    max-width: 80%;
+    padding: 12px;
+    position: relative;
+    top: 15vh;
+    width: 280px;
+}
+
+.card .qr-code-container {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card .qr-code-container .qr-code {
+    height: 100%;
+    width: 100%;
+}
+
+.card .infos {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.card .infos .title {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.card .infos .text {
+    color: var(--grayish-blue);
+    margin-bottom: 20px;
+}
+
+.attribution {
+    color: var(--dark-blue);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    top: 15vh;
+}
+
+.attribution a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+.attribution a:focus,
+.attribution a:hover {
+    color: var(--grayish-blue);
+}
