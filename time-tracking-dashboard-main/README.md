@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/RTX3070/fem-challenges/tree/master/time-tracking-dashboard-main](https://github.com/RTX3070/fem-challenges/tree/master/time-tracking-dashboard-main)
 - Live Site URL: [https://codepen.io/rtx3070/pen/bGYNVQe](https://codepen.io/rtx3070/pen/bGYNVQe)
 
 ## My process
