@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light-grayish-blue);
+    color: var(--desaturated-dark-blue);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    height: 100vh;
+}
+
+.article {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+}
+
+.article .poster-container .poster {
+    width: 100%;
+}
+
+.article .text-container .article-text .title {
+    color: var(--very-dark-grayish-blue);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.article .text-container {
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.article .text-container .author {
+    align-items: center;
+    display: flex;;
+    justify-content: space-between;
+    position: relative;
+}
+
+.article .text-container .author .avatar {
+    border-radius: 50%;
+    height: 40px;
+    margin-right: 15px;
+    width: 40px;
+}
+
+.article .text-container .author .infos {
+    flex-grow: 1;
+}
+
+.article .text-container .author .infos .name {
+    color: var(--very-dark-grayish-blue);
+    font-weight: 700;
+}
+
+.article .share-btn {
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px;
+    position: absolute;
+    transition: background-color .3s ease-in-out;
+    z-index: 2;
+}
+
+.article .socials {
+    align-items: center;
+    background-color: var(--very-dark-grayish-blue);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    opacity: 0;
+    padding: 30px;
+    position: absolute;
+    transition: opacity .3s ease-in-out;
+    z-index: 1;
+}
+
+.article .socials > span {
+    margin-right: 15px;
+}
+
+.article .socials > span:not(.share) {
+    align-self: baseline;
+}
+
+.article .socials span:first-child {
+    color: var(--grayish-blue);
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.attribution {
+    font-size: 10px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--desaturated-dark-blue);
+    text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:visited {
+    color: var(--grayish-blue);
+}
+
+@media screen and (min-width: 375px) {
+    .article {
+        height: 514px;
+        overflow: hidden;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 320px;
+    }
+
+    .article .text-container {
+        bottom: 0%;
+        padding: 30px 30px 20px 30px;
+        width: 100%;
+    }
+
+    .article .text-container .article-text .title {
+        margin: 5px 0 15px 0;
+    }
+
+    .article .text-container .author {
+        margin-top: 35px;
+    }
+
+    .article .share-btn {
+        bottom: 23px;
+        left: 259px;
+    }
+
+    .article .socials {
+        bottom: 0;
+        height: 80px;
+        width: 100%;
+    }
+
+    .article .socials.show {
+        opacity: 1;
+    }
+
+    .article .share-btn.show {
+        background-color: var(--grayish-blue);
+    }
+
+    .attribution {
+        bottom: -85px;
+        position: relative;
+        margin: auto;
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .article {
+        height: 254px;
+        overflow: unset;
+        width: 720px;
+    }
+
+    .article .poster-container {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 254px;
+        overflow: hidden;
+        width: 330px;
+    }
+
+    .article .poster-container .poster {
+        height: 254px;
+    }
+
+    .article .text-container {
+        border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+        bottom: unset;
+        height: 254px;
+        padding: 30px;
+        right: 0;
+        top: 0;
+        width: 450px;
+    }
+
+    .article .share-btn {
+        bottom: 34px;
+        left: unset;
+        right: 36px;
+    }
+
+    .article .socials {
+        border-radius: 10px;
+        bottom: 95px;
+        height: unset;
+        justify-content: space-between;
+        padding: 15px 30px;
+        right: -91px;
+        width: 35%;
+    }
+
+    .article .socials::after {
+        background-color: var(--very-dark-grayish-blue);
+        bottom: -13px;
+        content: '';
+        display: block;
+        height: 27px;
+        left: 94px;
+        position: absolute;
+        width: 27px;
+        transform: rotate(45deg);
+    }
+
+    .attribution {
+        bottom: -40vh;
+    }
+}

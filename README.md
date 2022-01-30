@@ -7,3 +7,4 @@ My frontendmentor.io challenges completed so far:
 4. Card Component Main
 5. QR Code Component Main
 6. Time Tracking Dashboard Main
+7. Article Preview Component Master
