@@ -8,3 +8,4 @@ My frontendmentor.io challenges completed so far:
 5. QR Code Component Main
 6. Time Tracking Dashboard Main
 7. Article Preview Component Master
+8. FAQ Accordion Card Main
