@@ -1,8 +1,4 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 :root {
     --linear-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
@@ -12,49 +8,49 @@
     --dark-grayish-blue: hsl(232, 13%, 33%);
 }
 
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    align-items: center;
-    background: url(images/bg-top.svg) right top no-repeat, url(images/bg-bottom.svg) left top 100% no-repeat;
-    background-size: auto;
-    display: flex;
-    flex-flow: row nowrap;
+    background-color: var(--very-light-grayish-blue);
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
-    justify-content: center;
-    min-height: 100vh;
+    font-weight: 700;
+    height: 100vh;
 }
 
-.main {
-    padding-bottom: 50px;
-    width: 80%;
+.card-container {
+    display: flex;
+    margin: auto;
 }
 
-/* SUBSCRIPTION PLANS */
-.main .subscription-plan {
-    margin: 50px 0;
+.card-container .plans {
     text-align: center;
 }
 
-.main .subscription-plan h2 {
+.card-container .plans h1 {
     color: var(--grayish-blue);
-    margin-bottom: 50px;
+    font-size: 26px;
+    margin-bottom: 25px;
+    transition: color .3s ease-in-out;
 }
 
-.main .subscription-plan span {
+.card-container .plans span {
     color: var(--light-grayish-blue);
-    font-weight: 700;
 }
 
-/* SUBSCRIPTION PLANS - Custom Toggle Switch */
-.main .subscription-plan .switch {
+.card-container .plans .switch {
     display: inline-block;
     height: 20px;
-    margin: 0 10px;
+    margin: 0 15px;
     position: relative;
     width: 35px;
 }
 
-.main .subscription-plan .switch .toggle-thumb {
+.card-container .plans .switch .toggle-thumb {
     align-items: center;
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     border-radius: 40px;
@@ -68,7 +64,7 @@ body {
     top: 0;
 }
 
-.main .subscription-plan .switch .toggle-thumb::before {
+.card-container .plans .switch .toggle-thumb::before {
     background-color: var(--very-light-grayish-blue);
     border-radius: 50%;
     bottom: 3px;
@@ -80,158 +76,170 @@ body {
     width: 14px;
 }
 
-.main .subscription-plan .switch .checkbox {
+.card-container .plans .switch .checkbox {
     height: 0;
     opacity: 0;
     width: 0;
 }
 
-.main .subscription-plan .switch .checkbox:checked + .toggle-thumb::before {
+.card-container .plans .switch .checkbox:checked + .toggle-thumb::before {
     transform: translateX(13px);
 }
 
-/* FEATURES CARDS */
-.main .card-container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-.main .card-container .card {
-    background-color: #ffffff;
+.card-container .card {
+    background-color: #FFFFFF;
     border-radius: 5px;
-    box-shadow: 0 0 25px 0 rgb(223, 223, 223);
+    box-shadow: 0px 0px 2px var(--light-grayish-blue);
     color: var(--grayish-blue);
-    flex: 0 0 22%;
-    margin: 0 10px;
+    padding: 25px;
     text-align: center;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
 }
 
-.main .card-container .card .plan-price {
-    margin: 40px 0;
-}
-
-.main .card-container .card .plan-price h4 {
-    margin-bottom: 15px;
-}
-
-.main .card-container .card .plan-price p {
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.main .card-container .card .plan-price p span {
-    font-size: 30px;
-    vertical-align: middle;
-}
-
-.main .card-container .card .plan-features ul {
-    list-style: none;
-    margin: auto;
-    width: 85%;
-}
-
-.main .card-container .card .plan-features ul li {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 15px 0;
-}
-
-.main .card-container .card .plan-features ul li:first-of-type,
-.main .card-container .card .plan-features ul li:last-of-type {
-    border-top: 1px solid var(--light-grayish-blue);
-    border-bottom: 1px solid var(--light-grayish-blue);
-}
-
-.main .card-container .card button {
-    cursor: pointer;
-    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    border: none;
-    border-radius: 6px;
-    color: #ffffff;
-    font-weight: 700;
-    height: 40px;
-    letter-spacing: 1px;
-    margin: 30px 0;
-    outline: none;
-    text-transform: uppercase;
-    transition: all .5s ease-in-out;
-    width: 85%;
-}
-
-.main .card-container .card button:hover,
-.main .card-container .card button:active {
-    color: hsl(237, 63%, 64%);
-    background-color: #ffffff;
-    background-image: unset;
-    border: 1px solid hsl(237, 63%, 64%);
-}
-
-.main .card-container #pro:hover {
-    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    color: #ffffff;
+.card-container .card:hover {
+    background-color: unset;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     transform: scale(1.1);
-    transition: all .5s ease-in-out;
 }
 
-.main .card-container #pro:hover > button {
-    background-image: unset;
-    background-color: #ffffff;
+.card-container .card h4 {
+    color: var(--grayish-blue);
+    transition: color .3s ease-in-out;
+}
+
+.card-container .card:hover h4 {
+    color: #FFFFFF;
+}
+
+.card-container .card .price {
+    color: var(--dark-grayish-blue);
+    font-size: 45px;
+    margin: 30px 0;
+    transition: color .3s ease-in-out;
+}
+
+.card-container .card .price span {
+    bottom: 7px;
+    font-size: 26px;
+    position: relative;
+}
+
+.card-container .card:hover .price {
+    color: #FFFFFF;
+}
+
+.card-container .card ul {
+    list-style-type: none;
+}
+
+.card-container .card ul li {
+    color: var(--grayish-blue);
+    padding: 15px 0;
+    transition: color .3s ease-in-out;
+}
+
+.card-container .card ul li:first-of-type,
+.card-container .card ul li:last-of-type {
+    border-bottom: 1px solid var(--very-light-grayish-blue);
+    border-top: 1px solid var(--very-light-grayish-blue);
+}
+
+.card-container .card:hover ul li:first-of-type,
+.card-container .card:hover ul li:last-of-type {
+    border-bottom: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+}
+
+.card-container .card:hover ul li {
+    color: #FFFFFF;
+}
+
+.card-container .card .btn {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    padding: 14px 0;
+    transition: color .3s ease-in-out;
+    width: 100%;
+}
+
+.card-container .card:hover .btn {
     color: hsl(237, 63%, 64%);
+    background-color: #FFFFFF;
+    background-image: unset;
 }
 
-.attribution {
-    align-self: flex-end;
-    font-size: 11px; 
-    position: absolute;
+footer .attribution {
+    color: var(--dark-grayish-blue);
+    font-size: 10px;
+    padding: 20px 0;
     text-align: center;
 }
-    
-.attribution a { 
-    color: hsl(228, 45%, 44%);
+
+footer .attribution a {
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+footer .attribution a:hover {
+    color: var(--grayish-blue);
 }
 
 @media screen and (min-width: 375px) {
-    .main {
+    body {
+        background: url('./images/bg-top.svg') 195px -50px no-repeat;
+    }
+
+    .card-container {
+        align-items: center;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        max-width: 316px;
+        position: relative;
+    }
+
+    .card-container .plans {
+        margin: 70px 0;
         width: 100%;
     }
 
-    .main .card-container {
-        flex-flow: row wrap;
+    .card-container .card {
+        width: 100%;
     }
 
-    .main .card-container .card {
-        flex: 0 0 90%;
-    }
-
-    .main .card-container .card:first-child {
-        margin-bottom: 20px;
-    }
-
-    .main .card-container .card:last-child {
-        margin-top: 20px;
+    .card-container .card:nth-of-type(3) {
+        margin: 30px 0;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .main {
-        width: 80%;
+    body {
+        background: url('./images/bg-bottom.svg') left bottom no-repeat, url('./images/bg-top.svg') right top no-repeat;
     }
 
-    .main .card-container {
-        flex-flow: row nowrap;
+    .card-container {
+        flex-flow: row wrap;
+        justify-content: center;
+        max-width: 1200px;
     }
 
-    .main .card-container .card {
-        flex: 0 0 22%;
+    .card-container .plans {
+        flex: 100%;
     }
 
-    .main .card-container .card:first-child {
-        margin-bottom: 0;
+    .card-container .card {
+        flex: 0 0 26%;
     }
 
-    .main .card-container .card:last-child {
-        margin-top: 0;
+    .card-container .card:nth-of-type(3) {
+        margin: 0 30px;
     }
 }
