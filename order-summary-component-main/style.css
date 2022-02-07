@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--pale-blue);
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 100vh;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: auto;
+    max-width: 330px;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card .hero {
+    width: 100%;
+}
+
+.card .hero .hero-image {
+    width: 100%;
+}
+
+.card .plan-infos {
+    color: var(--dark-blue);
+    padding: 25px;
+}
+
+.card .plan-infos .title {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.card .plan-infos .description {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.card .plan-infos .change-plan {
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.card .plan-infos .change-plan .icon-music {
+    margin-right: 20px;
+}
+
+.card .plan-infos .change-plan .plan-price {
+    display: inline;
+}
+
+.card .plan-infos .change-plan .plan-price span:first-child {
+    font-weight: 900;
+}
+
+.card .plan-infos .change-plan .plan-price span:last-child {
+    color: var(--desaturated-blue);
+}
+
+.card .plan-infos .change-plan .change {
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.card .plan-infos .payment-btn {
+    background-color: var(--bright-blue);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 15px 10px var(--pale-blue);
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    margin: 25px 0;
+    padding: 10px 0;
+    transition: background-color .3s ease-in-out;
+    width: 100%;
+}
+
+.card .plan-infos .payment-btn:hover {
+    background-color: hsl(245, 75%, 68%);
+}
+
+.card .plan-infos .cancel {
+    color: var(--desaturated-blue);
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer {
+    bottom: 0;
+    height: 38px;
+    position: fixed;
+    width: 100%;
+}
+
+footer .attribution {
+    color: var(--desaturated-blue);
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+footer .attribution a {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+footer .attribution a:hover {
+    color: var(--bright-blue);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url('./images/pattern-background-desktop.svg');
+    }
+}
