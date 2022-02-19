@@ -11,3 +11,4 @@ My frontendmentor.io challenges completed so far:
 8. FAQ Accordion Card Main
 9. Pricing Component with Toggle Master
 10. Order Summary Component Main
+11. E-commerce Product Page
